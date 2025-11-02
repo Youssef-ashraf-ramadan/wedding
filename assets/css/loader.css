@@ -1,0 +1,575 @@
+/************ ROMANTIC BOOK LOADER CSS ************/
+/* ====  Open Book Animation Loader styles ==== */
+
+/* Import Arabic Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Markazi+Text:wght@400;600&display=swap');
+body:not(.loaded) #loader-wrapper.wedding-loader {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999999999999 !important;
+  background: linear-gradient(135deg, #edf7f8 0%, #ffffff 50%, #edf7f8 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientShift 8s ease infinite !important;
+  overflow: hidden !important;
+  perspective: 1500px !important;
+}
+
+/* Loader Decorative Stars and Ring */
+body:not(.loaded) #loader-wrapper.wedding-loader .loader-star1 {
+  position: absolute !important;
+  left: 5% !important;
+  top: 10% !important;
+  width: 150px !important;
+  height: 150px !important;
+  opacity: 0.6 !important;
+  z-index: 999 !important;
+}
+
+body:not(.loaded) #loader-wrapper.wedding-loader .loader-star2 {
+  position: absolute !important;
+  right: 10% !important;
+  bottom: 15% !important;
+  width: 120px !important;
+  height: 120px !important;
+  opacity: 0.6 !important;
+  z-index: 999 !important;
+}
+
+body:not(.loaded) #loader-wrapper.wedding-loader .loader-ring {
+  position: absolute !important;
+  left: 50% !important;
+  top: 20% !important;
+  transform: translateX(-50%) !important;
+  width: 100px !important;
+  height: 100px !important;
+  opacity: 0.7 !important;
+  z-index: 999 !important;
+  animation: rotateRing 4s ease-in-out infinite !important;
+}
+
+body:not(.loaded) #loader-wrapper.wedding-loader .loader-ring-icon {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@keyframes rotateRing {
+  0%, 100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+body:not(.loaded) {
+  overflow: hidden !important;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+body:not(.loaded) #loader-wrapper.wedding-loader .wedding-invitation-content {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  transform-origin: center !important;
+  width: 500px !important;
+  max-width: 95vw !important;
+  height: 700px !important;
+  max-height: 95vh !important;
+  z-index: 1001 !important;
+  animation: bookOpen 2s ease-out !important;
+}
+
+@keyframes bookOpen {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2) rotateY(-20deg) rotateX(10deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.05) rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotateY(0deg) rotateX(0deg);
+  }
+}
+
+.invitation-text {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(to right, 
+    #faf8f5 0%, 
+    #f9f6f2 25%, 
+    #f7f3ef 49%, 
+    #f3e4d0 50%, 
+    #f7f3ef 51%, 
+    #f9f6f2 75%, 
+    #faf8f5 100%
+  ) !important;
+  box-shadow: 
+    inset 30px 0 60px rgba(0, 0, 0, 0.08),
+    inset -30px 0 60px rgba(0, 0, 0, 0.08),
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  padding: 50px !important;
+  overflow-y: auto !important;
+  gap: 20px !important;
+  direction: rtl !important;
+  text-align: right !important;
+  border-radius: 0 !important;
+}
+
+.invitation-text > * {
+  width: 100% !important;
+}
+
+/* Book binding in the middle */
+.invitation-text::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: -10px !important;
+  width: 12px !important;
+  height: calc(100% + 20px) !important;
+  background: linear-gradient(to right, 
+    rgba(139, 69, 19, 0.12) 0%,
+    rgba(139, 69, 19, 0.08) 50%,
+    rgba(139, 69, 19, 0.12) 100%
+  ) !important;
+  box-shadow: 
+    -2px 0 10px rgba(0, 0, 0, 0.1),
+    inset -1px 0 3px rgba(0, 0, 0, 0.15),
+    inset 1px 0 3px rgba(0, 0, 0, 0.15) !important;
+  transform: translateX(-50%) !important;
+  border-radius: 2px !important;
+  z-index: 1 !important;
+}
+
+/* Add decorative corner elements */
+.invitation-text::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 30px !important;
+  height: 30px !important;
+  background: radial-gradient(circle, rgba(201, 122, 61, 0.3) 0%, transparent 70%) !important;
+  border-radius: 50% !important;
+  opacity: 0.6 !important;
+}
+
+.bismillah {
+  font-size: 24px !important;
+  color: #d4a574 !important;
+  font-family: 'Amiri', 'Cairo', 'Markazi Text', serif !important;
+  font-weight: bold !important;
+  margin: 0 0 10px 0 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
+  text-align: center !important;
+  animation: slideInDown 0.5s ease-out 0.3s both !important;
+}
+
+.verse-text {
+  font-size: 18px !important;
+  color: #5c3c1f !important;
+  font-family: 'Amiri', 'Cairo', serif !important;
+  line-height: 2 !important;
+  text-align: center !important;
+  direction: rtl !important;
+  padding: 15px !important;
+  margin: 10px 0 !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(212, 165, 116, 0.3) !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05) !important;
+  animation: slideInDown 0.5s ease-out 0.6s both !important;
+}
+
+.invitation-opening {
+  font-size: 18px !important;
+  color: #5c3c1f !important;
+  font-family: 'Cairo', 'Tajawal', 'Amiri', sans-serif !important;
+  margin: 0 !important;
+  font-style: italic !important;
+  text-align: right !important;
+  animation: slideInDown 0.5s ease-out 0.9s both !important;
+}
+
+.invitation-main {
+  font-size: 20px !important;
+  color: #8b4513 !important;
+  font-family: 'Cairo', 'Tajawal', 'Amiri', 'Markazi Text', sans-serif !important;
+  font-weight: bold !important;
+  line-height: 1.6 !important;
+  margin: 15px 0 !important;
+  text-align: right !important;
+  animation: slideInDown 0.5s ease-out 1.2s both !important;
+}
+
+.highlight-text {
+  color: #c97a3d !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.wedding-details {
+  margin: 15px 0 !important;
+  text-align: right !important;
+  animation: slideInDown 0.5s ease-out 1.5s both !important;
+}
+
+.wedding-details p {
+  font-size: 16px !important;
+  color: #6b4423 !important;
+  font-family: 'Cairo', 'Tajawal', sans-serif !important;
+  line-height: 1.8 !important;
+  margin: 8px 0 !important;
+  font-weight: 600 !important;
+}
+
+.invitation-closing {
+  font-size: 18px !important;
+  color: #8b4513 !important;
+  font-family: 'Cairo', 'Tajawal', 'Amiri', sans-serif !important;
+  line-height: 1.6 !important;
+  margin: 15px 0 !important;
+  font-style: italic !important;
+  text-align: right !important;
+  animation: slideInDown 0.5s ease-out 1.8s both !important;
+}
+
+.logo-text-final {
+  font-size: 28px !important;
+  color: #c97a3d !important;
+  font-family: 'Cairo', 'Tajawal', 'Amiri', 'Markazi Text', sans-serif !important;
+  font-weight: bold !important;
+  margin-top: 15px !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+  letter-spacing: 4px !important;
+  text-align: center !important;
+  animation: slideInDown 0.5s ease-out 2.1s both !important;
+}
+
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartbeatFinal {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* SECOND BOOK FOR PHOTO GALLERY */
+body:not(.loaded) #loader-wrapper.wedding-loader #loader-book2.wedding-photo-book {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  transform-origin: center !important;
+  width: 500px !important;
+  max-width: 95vw !important;
+  height: 700px !important;
+  max-height: 95vh !important;
+  z-index: 1000 !important;
+  opacity: 0 !important;
+  animation: bookOpenSecond 2s ease-out 3.5s both !important;
+}
+
+@keyframes bookOpenSecond {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2) rotateY(20deg) rotateX(10deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.05) rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotateY(0deg) rotateX(0deg);
+  }
+}
+
+.photo-book-content {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(to right, 
+    #faf8f5 0%, 
+    #f9f6f2 25%, 
+    #f7f3ef 49%, 
+    #f3e4d0 50%, 
+    #f7f3ef 51%, 
+    #f9f6f2 75%, 
+    #faf8f5 100%
+  ) !important;
+  box-shadow: 
+    inset 30px 0 60px rgba(0, 0, 0, 0.08),
+    inset -30px 0 60px rgba(0, 0, 0, 0.08),
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.photo-book-content::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: -2px !important;
+  width: 12px !important;
+  height: calc(100% + 4px) !important;
+  background: linear-gradient(to right, 
+    rgba(139, 69, 19, 0.12) 0%,
+    rgba(139, 69, 19, 0.08) 50%,
+    rgba(139, 69, 19, 0.12) 100%
+  ) !important;
+  box-shadow: 
+    -2px 0 10px rgba(0, 0, 0, 0.1),
+    inset -1px 0 3px rgba(0, 0, 0, 0.15),
+    inset 1px 0 3px rgba(0, 0, 0, 0.15) !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  border-radius: 2px !important;
+}
+
+.photo-book-content::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 30px !important;
+  height: 30px !important;
+  background: radial-gradient(circle, rgba(201, 122, 61, 0.3) 0%, transparent 70%) !important;
+  border-radius: 50% !important;
+  opacity: 0.6 !important;
+  z-index: 15 !important;
+}
+
+.photo-book-slide {
+  position: absolute !important;
+  top: 20px !important;
+  left: 20px !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 8px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.photo-book-slide.slide-1 { animation: photoBookSlide1 3s ease-in-out 4s infinite !important; }
+.photo-book-slide.slide-2 { animation: photoBookSlide2 3s ease-in-out 4s infinite !important; }
+.photo-book-slide.slide-3 { animation: photoBookSlide3 3s ease-in-out 4s infinite !important; }
+.photo-book-slide.slide-4 { animation: photoBookSlide4 3s ease-in-out 4s infinite !important; }
+
+@keyframes photoBookSlide1 {
+  0%, 20% { opacity: 1; z-index: 4; transform: scale(1); }
+  25%, 100% { opacity: 0; z-index: 1; transform: scale(1.05); }
+}
+@keyframes photoBookSlide2 {
+  0%, 20% { opacity: 0; z-index: 1; transform: scale(1.05); }
+  25%, 45% { opacity: 1; z-index: 4; transform: scale(1); }
+  50%, 100% { opacity: 0; z-index: 1; transform: scale(1.05); }
+}
+@keyframes photoBookSlide3 {
+  0%, 45% { opacity: 0; z-index: 1; transform: scale(1.05); }
+  50%, 70% { opacity: 1; z-index: 4; transform: scale(1); }
+  75%, 100% { opacity: 0; z-index: 1; transform: scale(1.05); }
+}
+@keyframes photoBookSlide4 {
+  0%, 70% { opacity: 0; z-index: 1; transform: scale(1.05); }
+  75%, 95% { opacity: 1; z-index: 4; transform: scale(1); }
+  100% { opacity: 0; z-index: 1; transform: scale(1.05); }
+}
+
+/* Decorative Elements for Photo Book */
+.book-decoration {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  z-index: 15 !important;
+}
+
+.decoration-heart,
+.decoration-star,
+.decoration-sparkle {
+  position: absolute !important;
+  color: #ff6b9d !important;
+  font-size: 30px !important;
+  opacity: 0.7 !important;
+  animation: floatDecoration 3s ease-in-out infinite !important;
+}
+
+.decoration-star {
+  color: #ffd700 !important;
+}
+
+.decoration-sparkle {
+  color: #ff69b4 !important;
+  font-size: 25px !important;
+}
+
+.heart-1 {
+  top: 10% !important;
+  left: 15% !important;
+  animation-delay: 0s !important;
+}
+
+.heart-2 {
+  top: 85% !important;
+  right: 20% !important;
+  animation-delay: 1s !important;
+}
+
+.heart-3 {
+  top: 50% !important;
+  left: 10% !important;
+  animation-delay: 2s !important;
+}
+
+.star-1 {
+  top: 15% !important;
+  right: 15% !important;
+  animation-delay: 0.5s !important;
+}
+
+.star-2 {
+  top: 80% !important;
+  left: 20% !important;
+  animation-delay: 1.5s !important;
+}
+
+.sparkle-1 {
+  top: 20% !important;
+  left: 50% !important;
+  animation-delay: 0.3s !important;
+}
+
+.sparkle-2 {
+  top: 75% !important;
+  left: 50% !important;
+  animation-delay: 2.3s !important;
+}
+
+@keyframes floatDecoration {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg) scale(1.2);
+    opacity: 1;
+  }
+}
+
+.loaded #loader-wrapper #loader-book2.wedding-photo-book {
+  opacity: 0 !important;
+  transition: all 0.3s ease-out !important;
+}
+
+body:not(.loaded) #loader-wrapper .loader-section {
+  display: none !important;
+}
+
+body:not(.loaded) #loader-wrapper .loader-section.section-left,
+body:not(.loaded) #loader-wrapper .loader-section.section-right {
+  display: none !important;
+}
+
+.loaded #loader-wrapper .loader-section.section-left,
+.loaded #loader-wrapper .loader-section.section-right {
+  display: none !important;
+}
+
+.loaded #loader-wrapper .wedding-invitation-content {
+  opacity: 0 !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.loaded #loader-wrapper {
+  display: none !important;
+}
+
+.loaded {
+  overflow: auto !important;
+}
+
+@media (max-width: 768px) {
+  body:not(.loaded) #loader-wrapper.wedding-loader .wedding-invitation-content {
+    padding: 20px !important;
+    max-width: 95% !important;
+    height: 500px !important;
+  }
+  
+  .bismillah {
+    font-size: 14px !important;
+  }
+  
+  .verse-text {
+    font-size: 12px !important;
+    padding: 12px !important;
+    line-height: 1.8 !important;
+  }
+  
+  .invitation-opening {
+    font-size: 12px !important;
+  }
+  
+  .invitation-main {
+    font-size: 14px !important;
+  }
+  
+  .highlight-text {
+    font-size: 16px !important;
+  }
+  
+  .wedding-details p {
+    font-size: 12px !important;
+  }
+  
+  .invitation-closing {
+    font-size: 12px !important;
+  }
+  
+  .logo-text-final {
+    font-size: 16px !important;
+    letter-spacing: 3px !important;
+  }
+  
+  .wedding-photos {
+    height: 100px !important;
+  }
+}
+

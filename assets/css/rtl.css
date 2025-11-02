@@ -1,0 +1,310 @@
+/* ============================================
+   RTL Support for Arabic - مودة ورحمة
+   ============================================ */
+
+/* Import Arabic Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Markazi+Text:wght@400;600&display=swap');
+
+[dir="rtl"] {
+    direction: rtl;
+}
+
+/* ===== Float Directions ===== */
+[dir="rtl"] .float-left,
+[dir="rtl"] .float-start {
+    float: right !important;
+}
+
+[dir="rtl"] .float-right,
+[dir="rtl"] .float-end {
+    float: left !important;
+}
+
+[dir="rtl"] .float-md-right {
+    float: left !important;
+}
+
+/* ===== Text Alignment ===== */
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+[dir="rtl"] .text-md-left {
+    text-align: right !important;
+}
+
+/* ===== Margins & Padding ===== */
+[dir="rtl"] .ml-auto,
+[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .mr-auto,
+[dir="rtl"] .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .marginLeft {
+    margin-left: 0 !important;
+    margin-right: 10px !important;
+}
+
+/* ===== Navigation Bar ===== */
+[dir="rtl"] .navbar {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navbar-toggler {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .main-header .navbar-brand {
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .navbar-nav {
+    flex-direction: row;
+}
+
+
+
+
+[dir="rtl"] .navbar-light .navbar-nav .nav-link {
+    padding-left: 0 !important;
+    padding-right: 8px !important;
+    text-align: right;
+}
+
+
+
+
+
+
+/* ===== Dropdown Menu ===== */
+[dir="rtl"] .dropdown-menu {
+    right: auto !important;
+    left: 0 !important;
+}
+
+[dir="rtl"] .dropdown-toggle::after {
+    margin-left: 0 !important;
+    margin-right: 0.255em !important;
+}
+
+/* ===== Header Top ===== */
+[dir="rtl"] .header-right {
+    direction: ltr;
+}
+
+[dir="rtl"] .header-right ul,
+[dir="rtl"] .header-right ul li {
+    direction: ltr;
+}
+
+[dir="rtl"] .header-top1 .header-right ul li {
+    margin-right: 0;
+    margin-left: 4px;
+}
+
+/* ===== Forms ===== */
+[dir="rtl"] .input-group-append {
+    direction: ltr;
+}
+
+[dir="rtl"] .form-control {
+    text-align: right;
+}
+
+[dir="rtl"] .input-group {
+    direction: rtl;
+}
+
+[dir="rtl"] .input-group .form-control {
+    direction: rtl;
+}
+
+/* ===== Lists ===== */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+[dir="rtl"] li {
+    text-align: right;
+}
+
+/* ===== Carousel ===== */
+[dir="rtl"] .carousel-control-prev {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .carousel-control-next {
+    left: auto;
+    right: 0;
+}
+
+/* ===== Icons ===== */
+[dir="rtl"] .fa-caret-right:before {
+    content: "\f0d9";
+}
+
+/* ===== Footer ===== */
+[dir="rtl"] .footer-social-icons {
+    direction: ltr;
+}
+
+[dir="rtl"] .footer-social-icons a,
+[dir="rtl"] .user-li {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* ===== Grid Order ===== */
+[dir="rtl"] .col-lg-6.col-md-6.col-sm-12.order-lg-1 {
+    order: 2;
+}
+
+[dir="rtl"] .col-lg-6.col-md-6.col-sm-12.order-lg-2 {
+    order: 1;
+}
+
+/* ===== Content Sections ===== */
+[dir="rtl"] .home-banner-section,
+[dir="rtl"] .banner-img-content,
+[dir="rtl"] .home-banner-text {
+    direction: rtl;
+}
+
+/* ===== Fonts ===== */
+[dir="rtl"] body,
+[dir="rtl"] p,
+[dir="rtl"] span,
+[dir="rtl"] div,
+[dir="rtl"] .form-control {
+    font-family: 'Tajawal', 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+    font-family: 'Cairo', 'Tajawal', 'Amiri', 'Markazi Text', 'Segoe UI', sans-serif;
+    direction: rtl;
+}
+
+/* ===== Buttons & Cards ===== */
+[dir="rtl"] .btn {
+    direction: rtl;
+}
+
+[dir="rtl"] .card {
+    direction: rtl;
+}
+
+[dir="rtl"] .progress {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-list {
+    direction: rtl;
+}
+
+/* Heart Logo Animation in Navbar */
+.heart-logo-nav {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1050;
+}
+
+.heart-logo-nav .animated-heart {
+    font-size: 30px;
+    color: #ff6b9d;
+    animation: heartBeatNav 1.5s ease-in-out infinite;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+    transition: all 0.3s ease;
+}
+
+.heart-logo-nav .animated-heart:hover {
+    color: #c44569;
+    transform: scale(1.2);
+    text-shadow: 0 0 20px rgba(255, 107, 157, 0.8);
+}
+
+@keyframes heartBeatNav {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 30% {
+        transform: scale(0.9);
+    }
+    20%, 40%, 50%, 60%, 70%, 80%, 90% {
+        transform: scale(1.1);
+    }
+}
+
+/* Center Navbar Links */
+[dir="rtl"] .navbar-nav.mx-auto {
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+[dir="rtl"] .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+[dir="rtl"] .main-header .navbar-collapse .navbar-nav {
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .heart-logo-nav {
+        right: 60px;
+    }
+    
+    [dir="rtl"] .navbar-nav.mx-auto {
+        margin: 0 !important;
+        text-align: right;
+    }
+    
+    [dir="rtl"] .navbar-collapse .navbar-nav {
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .heart-logo-nav {
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .heart-logo-nav {
+        right: 45px;
+    }
+}
+
