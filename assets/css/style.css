@@ -1709,6 +1709,7 @@ a {
 .form-section .contact-form-margin {
   margin-bottom: 33px;
   width: 100%;
+  position: relative;
 }
 .form-section .contact-form-margin-text-area {
   margin-bottom: 33px;
